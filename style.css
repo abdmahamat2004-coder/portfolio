@@ -661,4 +661,33 @@ body {
         width: 200px;
         height: 200px;
     }
+
+    /* Effet machine à écrire */
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 70px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    margin-left: 2px;
+    animation: blink 0.8s infinite;
+    font-weight: 300;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+#typed-text {
+    font-weight: 500;
+    color: var(--primary-color);
+}
 }
