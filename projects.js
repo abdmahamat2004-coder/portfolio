@@ -41,13 +41,13 @@ const projectsData = [
         link: "#"
     },
     {
-        id: 6,
-        title: "Blog Personnel Technologique",
-        description: "Blog moderne avec système de publication d'articles, commentaires et administration complète.",
-        image: "https://via.placeholder.com/400x200/10b981/ffffff?text=Blog+Techno",
-        tags: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
-        link: "#"
-    }
+    id: 6,
+    title: "Plateforme d'Enseignement Urbain",
+    description: "Plateforme complète d'enseignement urbain développée avec PHP et MySQL. Interface responsive, gestion des cours, inscriptions et suivi des apprenants.",
+    image: "urban.png",
+    tags: ["PHP", "MySQL", "Responsive", "Bootstrap"],
+    link: "http://urbain.atwebpages.com/index.php"  // ← REMPLACEZ PAR VOTRE LIEN
+}
 ];
 
 // Fonction pour afficher les projets
