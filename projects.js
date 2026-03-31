@@ -88,3 +88,55 @@ function displayProjects() {
 
 // Initialisation des projets au chargement
 document.addEventListener('DOMContentLoaded', displayProjects);
+// Effet machine à écrire
+document.addEventListener('DOMContentLoaded', function() {
+    // Les phrases à afficher
+    const phrases = [
+        "Étudiant en Génie Logiciel 🎓",
+        "Développeur Web Passionné 💻",
+        "Créateur d'expériences digitales ✨",
+        "Basé à Douala, Cameroun 🇨🇲"
+    ];
+    
+    let currentPhraseIndex = 0;
+    let currentCharIndex = 0;
+    let isDeleting = false;
+    let typedTextElement = document.getElementById('typed-text');
+    
+    function typeEffect() {
+        const currentPhrase = phrases[currentPhraseIndex];
+        
+        if (isDeleting) {
+            // Effacement
+            typedTextElement.textContent = currentPhrase.substring(0, currentCharIndex - 1);
+            currentCharIndex--;
+        } else {
+            // Écriture
+            typedTextElement.textContent = currentPhrase.substring(0, currentCharIndex + 1);
+            currentCharIndex++;
+        }
+        
+        // Gestion du passage à la phrase suivante
+        if (!isDeleting && currentCharIndex === currentPhrase.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, 2000); // Pause avant effacement
+            return;
+        }
+        
+        if (isDeleting && currentCharIndex === 0) {
+            isDeleting = false;
+            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+            setTimeout(typeEffect, 500);
+            return;
+        }
+        
+        // Vitesse d'écriture/effacement
+        const speed = isDeleting ? 50 : 100;
+        setTimeout(typeEffect, speed);
+    }
+    
+    // Démarrer l'effet
+    if (typedTextElement) {
+        typeEffect();
+    }
+});
