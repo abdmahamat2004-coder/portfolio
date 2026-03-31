@@ -43,7 +43,7 @@ const projectsData = [
     {
     id: 6,
     title: "Plateforme d'Enseignement Urbain",
-    description: "Plateforme complète d'enseignement urbain développée avec PHP et MySQL. Interface responsive, gestion des cours, inscriptions et suivi des apprenants.",
+    description: "Plateforme  de signalement urbain développée avec PHP et MySQL. Interface responsive, gestion des cours, inscriptions et suivi des apprenants.",
     image: "urban.png",
     tags: ["PHP", "MySQL", "Responsive", "Bootstrap"],
     link: "http://urbain.atwebpages.com/index.php"  // ← REMPLACEZ PAR VOTRE LIEN
